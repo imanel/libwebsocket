@@ -101,7 +101,7 @@ module LibWebSocket
       return unless self.buffer.length >= 2
 
       while self.buffer.length > 0
-        hdr = self.buffer[0]
+        hdr = self.buffer[0..0]
         bits = hdr.unpack("B*").first.split(//)
 
         self.fin = bits[0]
@@ -109,7 +109,7 @@ module LibWebSocket
         opcode = hdr.unpack('C').first & 0b00001111
         offset = 1 # FIN,RSV[1-3],OPCODE
 
-        payload_len = buffer[1].unpack('C').first
+        payload_len = buffer[1..1].unpack('C').first
         self.masked = (payload_len & 0b10000000) >> 7
         offset += 1 # + MASKED,PAYLOAD_LEN
 
