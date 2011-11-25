@@ -4,6 +4,12 @@ class TestURL < Test::Unit::TestCase
 
   def test_parse
     url = LibWebSocket::URL.new
+    assert url.parse('ws://example.com')
+    assert !url.secure
+    assert_equal 'example.com', url.host
+    assert_equal '/', url.resource_name
+
+    url = LibWebSocket::URL.new
     assert url.parse('ws://example.com/')
     assert !url.secure
     assert_equal 'example.com', url.host
