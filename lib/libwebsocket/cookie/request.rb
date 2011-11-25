@@ -20,12 +20,12 @@ module LibWebSocket
 
         cookie = nil
         self.pairs.each do |pair|
-          next if pair[0].nil?
+          next unless pair[0]
 
           if pair[0].match(/^[^\$]/)
-            cookies.push(cookie) unless cookie.nil?
+            cookies.push(cookie) if cookie
 
-            cookie = self.build_cookie( :name => pair[0], :value => pair[1], :version => version)
+            cookie = self.build_cookie(:name => pair[0], :value => pair[1], :version => version)
           elsif pair[0] == '$Path'
             cookie.path = pair[1]
           elsif pair[0] == '$Domain'
@@ -33,7 +33,7 @@ module LibWebSocket
           end
         end
 
-        cookies.push(cookie) unless cookie.nil?
+        cookies.push(cookie) if cookie
 
         return cookies
       end

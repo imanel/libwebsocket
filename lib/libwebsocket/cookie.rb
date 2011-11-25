@@ -19,7 +19,7 @@ module LibWebSocket
     end
 
     # Parse cookie string to array
-    def parse(string)
+    def parse(string = nil)
       self.pairs = []
 
       return if string.nil? || string == ''

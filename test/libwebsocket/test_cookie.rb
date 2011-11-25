@@ -4,6 +4,7 @@ class TestCookie < Test::Unit::TestCase
 
   def test_parse
     cookie = LibWebSocket::Cookie.new
+    assert_nil cookie.parse
     assert_nil cookie.parse('')
     assert cookie.parse('foo=bar; baz = zab; hello= "the;re"; here')
     assert_equal [['foo', 'bar'], ['baz', 'zab'], ['hello', 'the;re'], ['here', nil]], cookie.pairs
