@@ -3,6 +3,7 @@
 ## Edge
 
 - New gemspec and bundler files
+- Roll back from OpeningHandshake to Handshake - there were reports that it's too confusing
 
 ## 0.1.1 / 2011-10-24
 

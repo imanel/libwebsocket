@@ -1,12 +1,12 @@
 module LibWebSocket
-  class OpeningHandshake
+  class Handshake
     # Construct or parse a client WebSocket handshake. This module is written for
     # convenience, since using request and response directly requires the same code
     # again and again.
     #
     # SYNOPSIS
     #
-    #   h = LibWebSocket::OpeningHandshake::Client.new(:url => 'ws://example.com')
+    #   h = LibWebSocket::Handshake::Client.new(:url => 'ws://example.com')
     #
     #   # Create request
     #   h.to_s # GET /demo HTTP/1.1
@@ -32,7 +32,7 @@ module LibWebSocket
     #
     #   h.error # Check if there were any errors
     #   h.done? # Returns true
-    class Client < OpeningHandshake
+    class Client < Handshake
 
       attr_accessor :url
 
