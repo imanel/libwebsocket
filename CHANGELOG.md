@@ -1,5 +1,9 @@
 # Changelog
 
+## Edge
+
+- New gemspec and bundler files
+
 ## 0.1.1 / 2011-10-24
 
 - Fixed bug that prevented query strings from being included in requests
