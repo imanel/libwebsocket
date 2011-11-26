@@ -1,9 +1,6 @@
 # -*- encoding: binary -*-
 
 module LibWebSocket
-  # Frame error - usually means that frame exceeded limit of payload size of frament count
-  class FrameError < Error; end
-
   # Construct or parse a WebSocket frame.
   #
   # SYNOPSIS
@@ -18,6 +15,8 @@ module LibWebSocket
   #   frame.next # get next message
   #   frame.next # get another next message
   class Frame
+
+    autoload :Error, "#{File.dirname(__FILE__)}/frame/error"
 
     MAX_RAND_INT = 2 ** 32
     TYPES = {
@@ -130,7 +129,7 @@ module LibWebSocket
 
         if payload_len > self.max_payload_size
           self.buffer = ''
-          raise FrameError.new("Payload is too big. Deny big message (#{payload_len}) or increase max_payload_size (#{self.max_payload_size})")
+          raise Error::MessageTooBig.new("Payload is too big. Deny big message (#{payload_len}) or increase max_payload_size (#{self.max_payload_size})")
         end
 
         mask = ''
@@ -169,7 +168,7 @@ module LibWebSocket
           @fragments.push(opcode) if @fragments.empty?
 
           @fragments.push(payload)
-          raise FrameError.new("Too many fragments") if @fragments.size > self.max_fragments_amount
+          raise Error::PolicyViolation.new("Too many fragments") if @fragments.size > self.max_fragments_amount
         end
       end
 
