@@ -80,7 +80,7 @@ examples directory in the repository.
 
 ## Copyright
 
-Copyright (C) 2011, Bernard Potocki.
+Copyright (C) 2012, Bernard Potocki.
 
 Based on protocol-websocket perl distribution by Viacheslav Tykhanovskyi.
 

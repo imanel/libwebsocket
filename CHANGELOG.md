@@ -1,9 +1,12 @@
 # Changelog
 
-## Edge
+## 0.2.0 / 2012-03-20
 
 - New gemspec and bundler files
 - Roll back from OpeningHandshake to Handshake - there were reports that it's too confusing
+- Fixes for cookie handling
+- Support for drafts 10+
+- Error codes are handled according to specification
 
 ## 0.1.1 / 2011-10-24
 
