@@ -65,7 +65,7 @@ be one. It can be used in any server, event loop etc.
 
     # Create frame
     frame = LibWebSocket::Frame.new('123')
-    frame.to_s # \x00123\xff
+    frame.next # \x00123\xff
 
     # Parse frames
     frame = LibWebSocket::Frame.new
