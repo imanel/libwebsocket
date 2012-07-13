@@ -1,6 +1,6 @@
 # Changelog
 
-## Edge
+## 0.1.4 / 2012-07-13
 
 - New gemspec and bundler files
 - Fixed some encoding errors
