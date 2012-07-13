@@ -55,9 +55,12 @@ module LibWebSocket
 
     # Append a frame chunk.
     # @example
-    #   frame.append(...)
-    def append(data = nil)
-      return unless data
+    #   frame.append("\x00foo")
+    #   frame.append("bar\xff")
+    def append(string = nil)
+      return unless string.is_a?(String)
+
+      @buffer << string.force_encoding("ASCII-8BIT")
 
       self.buffer += data
       return self
