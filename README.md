@@ -1,4 +1,4 @@
-# Protocol::WebSocket [![](http://travis-ci.org/imanel/libwebsocket.png)](http://travis-ci.org/imanel/libwebsocket)
+# LibWebSocket [![](http://travis-ci.org/imanel/libwebsocket.png)](http://travis-ci.org/imanel/libwebsocket)
 
 A WebSocket message parser/constructor. It is not a server and is not meant to
 be one. It can be used in any server, event loop etc.
