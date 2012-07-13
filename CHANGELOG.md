@@ -3,6 +3,8 @@
 ## Edge
 
 - New gemspec and bundler files
+- Fixed some encoding errors
+- Fixes for JRuby
 
 ## 0.1.3 / 2012-03-21
 
