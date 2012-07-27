@@ -50,7 +50,7 @@ class TestFrame < Test::Unit::TestCase
 
     # Too many fragments
     130.times { f.append(["010348656c"].pack('H*')) }
-    assert_raise(LibWebSocket::Frame::Error::PolicyViolation) { f.next_bytes }
+    assert_raise(LibWebSocket::FrameError) { f.next_bytes }
 
     # Ping request
     f = LibWebSocket::Frame.new(:version => 'draft-ietf-hybi-10')
@@ -78,7 +78,7 @@ class TestFrame < Test::Unit::TestCase
 
     # Too big frame
     f.append ["827F0000000000100000" + '05' * (65536 + 1)].pack('H*')
-    assert_raise(LibWebSocket::Frame::Error::MessageTooBig) { f.next_bytes }
+    assert_raise(LibWebSocket::FrameError) { f.next_bytes }
   end
 
 end
