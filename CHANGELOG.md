@@ -1,6 +1,6 @@
 # Changelog
 
-## Edge
+## 0.1.5 / 2012-07-27
 
 - Fixed problem caused by invalid draft 10 support
 
