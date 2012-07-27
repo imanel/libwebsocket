@@ -126,9 +126,7 @@ module LibWebSocket
     def append(data)
       return if self.error
 
-      data = data.encode("ASCII-8BIT") if data.respond_to?(:encode)
-
-      @buffer << data
+      @buffer += data
 
       if @buffer.length > @max_message_size
         self.error = 'Message is too long'
