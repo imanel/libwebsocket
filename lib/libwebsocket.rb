@@ -2,7 +2,6 @@
 # not provide a WebSocket server or client, but is made for using in http servers
 # or clients to provide WebSocket support.
 module LibWebSocket
-  class Error < RuntimeError; end # Universal LibWebSocket error class
 
   autoload :Cookie,        "#{File.dirname(__FILE__)}/libwebsocket/cookie"
   autoload :Frame,         "#{File.dirname(__FILE__)}/libwebsocket/frame"
