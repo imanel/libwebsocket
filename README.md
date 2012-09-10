@@ -3,7 +3,7 @@
 A WebSocket message parser/constructor. It is not a server and is not meant to
 be one. It can be used in any server, event loop etc.
 
-**Note:** this implementation is supporting only hixie -75 and -76 drafts. Current development of newer drafts are handled within [websocket-ruby](https://github.com/imanel/websocket-rack) gem and if you are starting new project it will be best to use it instead of libwebsocket. However, if you are already using libwebsocket then you don't need to hurry with transition - this gem will use websocket-rack to support newer drafts.
+**Note:** this implementation is supporting only hixie -75 and -76 drafts. Current development of newer drafts are handled within [websocket-ruby](https://github.com/imanel/websocket-ruby) gem and if you are starting new project it will be best to use it instead of libwebsocket. However, if you are already using libwebsocket then you don't need to hurry with transition - this gem will use websocket-rack to support newer drafts.
 
 ## Server handshake
 
