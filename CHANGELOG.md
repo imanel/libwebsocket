@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.6 / 2012-11-18
+
+- Migrate to websocket gem
+- Remove most of deprecated and not working code
+- Frame migration is last thing that prevents this gem to support drafts 00-17(RFC)
+
 ## 0.1.5 / 2012-07-27
 
 - Fixed problem caused by invalid draft 10 support
