@@ -9,9 +9,9 @@ class TestServerOpeningHandshake < Test::Unit::TestCase
       "Upgrade: WebSocket\x0d\x0a" +
       "Connection: Upgrade\x0d\x0a" +
       "Host: example.com\x0d\x0a" +
-      "Sec-WebSocket-Key1: #{h.controller.key1}\x0d\x0a" +
-      "Sec-WebSocket-Key2: #{h.controller.key2}\x0d\x0a" +
-      "\x0d\x0a#{h.controller.key3}"
+      "Sec-WebSocket-Key1: #{h.controller.send(:key1)}\x0d\x0a" +
+      "Sec-WebSocket-Key2: #{h.controller.send(:key2)}\x0d\x0a" +
+      "\x0d\x0a#{h.controller.send(:key3)}"
 
     h = LibWebSocket::OpeningHandshake::Client.new(:url => 'ws://example.com')
 
@@ -19,9 +19,9 @@ class TestServerOpeningHandshake < Test::Unit::TestCase
       "Upgrade: WebSocket\x0d\x0a" +
       "Connection: Upgrade\x0d\x0a" +
       "Host: example.com\x0d\x0a" +
-      "Sec-WebSocket-Key1: #{h.controller.key1}\x0d\x0a" +
-      "Sec-WebSocket-Key2: #{h.controller.key2}\x0d\x0a" +
-      "\x0d\x0a#{h.controller.key3}"
+      "Sec-WebSocket-Key1: #{h.controller.send(:key1)}\x0d\x0a" +
+      "Sec-WebSocket-Key2: #{h.controller.send(:key2)}\x0d\x0a" +
+      "\x0d\x0a#{h.controller.send(:key3)}"
 
     assert !h.done?
     assert h.parse('')
