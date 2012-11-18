@@ -12,7 +12,6 @@ Gem::Specification.new do |s|
   s.summary     = %q{Universal Ruby library to handle WebSocket protocol}
   s.description = %q{Universal Ruby library to handle WebSocket protocol}
 
-  s.add_dependency 'addressable'
   s.add_dependency 'websocket'
   s.add_development_dependency 'rake'
 
