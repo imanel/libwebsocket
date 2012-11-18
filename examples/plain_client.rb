@@ -7,7 +7,7 @@ class WebSocket
     @hs ||= LibWebSocket::OpeningHandshake::Client.new(:url => url, :version => params[:version])
     @frame ||= LibWebSocket::Frame.new
 
-    @socket = TCPSocket.new(@hs.url.host, @hs.url.port || 80)
+    @socket = TCPSocket.new(@hs.controller.host, @hs.controller.port || 80)
 
     @socket.write(@hs.to_s)
     @socket.flush

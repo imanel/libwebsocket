@@ -32,8 +32,8 @@ class TestServerOpeningHandshake < Test::Unit::TestCase
     assert_nil h.error
 
     h = LibWebSocket::OpeningHandshake::Server.new
-    assert_nil h.parse("GET /demo\x0d\x0a")
-    assert_equal 'Wrong request line', h.error
+    h.parse("GET /demo\x0d\x0a\x0d\x0a")
+    assert_equal :invalid_header, h.error
   end
 
 end
