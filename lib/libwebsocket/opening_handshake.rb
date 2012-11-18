@@ -5,30 +5,21 @@ module LibWebSocket
     autoload :Client, "#{File.dirname(__FILE__)}/opening_handshake/client"
     autoload :Server, "#{File.dirname(__FILE__)}/opening_handshake/server"
 
-    def secure
-      @controller.secure
-    end
+    extend Forwardable
 
-    def error
-      @controller.error
+    def_delegator :controller, :secure
+    def_delegator :controller, :error
+    def_delegator :controller, :to_s
+    def_delegator :controller, :finished?, :done?
+
+    def controller
+      @controller
     end
 
     def parse(opts)
       @controller << opts
       return false if @controller.error
       return true
-    end
-
-    def done?
-      @controller.finished?
-    end
-
-    def to_s
-      @controller.to_s
-    end
-
-    def controller
-      @controller
     end
 
   end
