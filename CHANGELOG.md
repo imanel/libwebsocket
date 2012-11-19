@@ -1,6 +1,6 @@
 # Changelog
 
-## Edge
+## 0.1.6.1 / 2012-11-19
 
 - Fix `uninitialized constant LibWebSocket::OpeningHandshake::Forwardable` error
 
