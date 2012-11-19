@@ -1,4 +1,5 @@
-# LibWebSocket [![](https://travis-ci.org/imanel/libwebsocket.png)](http://travis-ci.org/imanel/libwebsocket)
+# LibWebSocket
+[![Build Status](https://travis-ci.org/imanel/libwebsocket.png)](http://travis-ci.org/imanel/libwebsocket) [![Dependency Status](https://gemnasium.com/imanel/libwebsocket.png)](http://gemnasium.com/imanel/libwebsocket)
 
 A WebSocket message parser/constructor. It is not a server and is not meant to
 be one. It can be used in any server, event loop etc.
