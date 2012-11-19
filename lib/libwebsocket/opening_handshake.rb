@@ -1,3 +1,4 @@
+require 'forwardable'
 module LibWebSocket
   # This is a base class for LibWebSocket::OpeningHandshake::Client and LibWebSocket::OpeningHandshake::Server.
   class OpeningHandshake

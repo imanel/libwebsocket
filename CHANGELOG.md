@@ -1,5 +1,9 @@
 # Changelog
 
+## Edge
+
+- Fix `uninitialized constant LibWebSocket::OpeningHandshake::Forwardable` error
+
 ## 0.1.6 / 2012-11-18
 
 - Migrate to websocket gem
