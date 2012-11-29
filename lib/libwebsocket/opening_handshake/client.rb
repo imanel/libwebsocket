@@ -34,10 +34,16 @@ module LibWebSocket
     #   h.done? # Returns true
     class Client < OpeningHandshake
 
-      def_delegator :controller, :uri, :url
+      def_delegator :controller, :uri
 
       def initialize(hash = {})
         @controller = ::WebSocket::Handshake::Client.new({:version => 76}.merge(hash))
+      end
+
+      def url
+        lws_url = LibWebSocket::URL.new
+        lws_url.parse(uri)
+        lws_url
       end
 
     end

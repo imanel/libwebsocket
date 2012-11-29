@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.description = %q{Universal Ruby library to handle WebSocket protocol}
 
   s.add_dependency 'websocket'
+  s.add_dependency 'addressable'
   s.add_development_dependency 'rake'
 
   s.files         = `git ls-files`.split("\n")

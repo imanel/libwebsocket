@@ -4,7 +4,8 @@ require 'websocket'
 # or clients to provide WebSocket support.
 module LibWebSocket
 
-  autoload :Frame,         "#{File.dirname(__FILE__)}/libwebsocket/frame"
+  autoload :Frame,            "#{File.dirname(__FILE__)}/libwebsocket/frame"
   autoload :OpeningHandshake, "#{File.dirname(__FILE__)}/libwebsocket/opening_handshake"
+  autoload :URL,              "#{File.dirname(__FILE__)}/libwebsocket/url"
 
 end
