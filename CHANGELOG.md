@@ -1,8 +1,9 @@
 # Changelog
 
-## 0.1.7 / 2012-11-29
+## 0.1.7.1 / 2012-11-29
 
 - Restore behaviour of LibWebSocket::OpeningHandshake::Client#url
+- Fix for JRuby 1.7.0 in Ruby 1.9 mode
 
 ## 0.1.6.1 / 2012-11-19
 
