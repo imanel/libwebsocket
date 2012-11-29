@@ -31,6 +31,7 @@ module LibWebSocket
       return unless string.is_a?(String)
 
       @buffer += string
+      @buffer.force_encoding('ASCII-8BIT') if @buffer.respond_to?(:force_encoding)
 
       return self
     end
