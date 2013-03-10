@@ -44,7 +44,7 @@ module LibWebSocket
     #   frame.next; # =>  foo
     #   frame.next; # =>  bar
     def next
-      return unless @buffer.slice!(/^[^\x00]*\x00(.*?)\xff/m)
+      return unless @buffer.slice!(/^[^\x00]*\x00(.*?)\xff/nm)
 
       string = $1
       string.force_encoding('UTF-8') if string.respond_to?(:force_encoding)
