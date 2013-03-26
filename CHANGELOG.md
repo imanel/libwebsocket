@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.8 / 2013-03-26
+
+- Bugfixes for Ruby 2.0.0
+
 ## 0.1.7.1 / 2012-11-29
 
 - Restore behaviour of LibWebSocket::OpeningHandshake::Client#url
