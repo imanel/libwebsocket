@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = "http://github.com/imanel/libwebsocket"
   s.summary     = %q{Universal Ruby library to handle WebSocket protocol}
   s.description = %q{Universal Ruby library to handle WebSocket protocol}
+  s.license     = "MIT"
 
   s.add_dependency 'websocket'
   s.add_dependency 'addressable'
